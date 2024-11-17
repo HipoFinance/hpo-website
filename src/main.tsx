@@ -15,7 +15,7 @@ updateRemainingTime()
 
 function updateRemainingTime() {
     const now = Date.now()
-    const event = new Date(2024, 10, 25, 12, 0)
+    const event = new Date(Date.UTC(2024, 10, 25, 12, 0))
     const remain = event.getTime() - now
 
     if (remain < 0) {
@@ -35,9 +35,9 @@ function updateRemainingTime() {
         return
     }
 
-    daysEl.innerText = days.toString()
-    hoursEl.innerText = hours.toString()
-    minutesEl.innerText = minutes.toString()
+    daysEl.innerText = days.toString().padStart(2, '0')
+    hoursEl.innerText = hours.toString().padStart(2, '0')
+    minutesEl.innerText = minutes.toString().padStart(2, '0')
 }
 
 createRoot(document.getElementById('root')!).render(
