@@ -7,37 +7,61 @@ import '@fontsource/heebo/latin-500.css'
 import '@fontsource/heebo/latin-700.css'
 import '@fontsource/eczar/latin-700.css'
 
-const aMinute = 1_000 * 60
-const anHour = aMinute * 60
-const aDay = anHour * 24
+updateHpoData()
 
-updateRemainingTime()
+function updateHpoData() {
+    let timer = setTimeout(updateHpoData, 300_000)
 
-function updateRemainingTime() {
-    const now = Date.now()
-    const event = new Date(Date.UTC(2024, 10, 25, 12, 0))
-    const remain = event.getTime() - now
-
-    if (remain < 0) {
+    const marketCapEl: HTMLElement | null = document.querySelector('#hpoMarketCap')
+    const volumeEl: HTMLElement | null = document.querySelector('#hpoVolume')
+    const holdersEl: HTMLElement | null = document.querySelector('#hpoHolders')
+    if (marketCapEl == null || volumeEl == null || holdersEl == null) {
+        console.log('=-> html elements not found')
         return
     }
 
-    setTimeout(updateRemainingTime, 5_000)
+    fetch('https://gauge.hipo.finance/data')
+        .then((res) => res.json())
+        .then(
+            (res: {
+                ok: boolean
+                result: {
+                    hpo: {
+                        holders_count: number
+                        market: {
+                            market_cap: { usd: number }
+                            total_volume: { usd: number }
+                        }
+                    }
+                }
+            }) => {
+                if (res.ok && res.result.hpo.market.market_cap.usd > 0) {
+                    marketCapEl.innerText = '$' + formatCompact1Fraction(res.result.hpo.market.market_cap.usd)
+                } else {
+                    marketCapEl.innerText = '-'
+                }
 
-    const days = Math.floor(remain / aDay)
-    const hours = Math.floor((remain % aDay) / anHour)
-    const minutes = Math.floor(((remain % aDay) % anHour) / aMinute)
+                if (res.ok && res.result.hpo.market.total_volume.usd > 0) {
+                    volumeEl.innerText = '$' + formatCompact1Fraction(res.result.hpo.market.total_volume.usd)
+                } else {
+                    volumeEl.innerText = '-'
+                }
 
-    const daysEl: HTMLElement | null = document.querySelector('#remainingDays')
-    const hoursEl: HTMLElement | null = document.querySelector('#remainingHours')
-    const minutesEl: HTMLElement | null = document.querySelector('#remainingMinutes')
-    if (daysEl == null || hoursEl == null || minutesEl == null) {
-        return
-    }
+                if (res.ok && res.result.hpo.holders_count > 0) {
+                    holdersEl.innerText = formatCompact1Fraction(res.result.hpo.holders_count)
+                } else {
+                    holdersEl.innerText = '-'
+                }
+            },
+        )
+        .catch(() => {
+            clearTimeout(timer)
+            timer = setTimeout(updateHpoData, 5000)
+        })
+}
 
-    daysEl.innerText = days.toString().padStart(2, '0')
-    hoursEl.innerText = hours.toString().padStart(2, '0')
-    minutesEl.innerText = minutes.toString().padStart(2, '0')
+function formatCompact1Fraction(n: number): string {
+    return n.toLocaleString(undefined, { notation: 'compact', maximumFractionDigits: 1 })
 }
 
 createRoot(document.getElementById('root')!).render(

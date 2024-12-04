@@ -25,6 +25,10 @@ export default {
                 'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
                 brush: 'url(/brush.svg)',
             },
+            rotate: {
+                '30': '30deg',
+                '-30': '-30deg',
+            },
         },
     },
     plugins: [],
