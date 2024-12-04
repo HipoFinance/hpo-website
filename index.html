@@ -22,7 +22,7 @@
         <script src="https://widgets.coingecko.com/gecko-coin-price-chart-widget.js"></script>
     </head>
     <body class="bg-darkblue2 font-heebo text-gray1">
-        <div class="bg-gradient-radial from-darkblue1 to-darkblue2 bg-fixed text-center">
+        <div class="bg-gradient-radial from-darkblue1 to-darkblue2 bg-fixed text-center items-center">
             <div class="mx-auto min-w-[360px] flex flex-row items-center sm:max-w-screen-lg">
                 <div class="mb-4 flex w-full flex-row items-center gap-4 p-8">
                     <a href="https://hipo.finance/"><img src="hipo.svg" class="h-16 w-16" /></a>
@@ -37,10 +37,10 @@
                 </div>
             </div>
 
-            <div class="mx-auto mb-24 min-w-[360px] flex items-center gap-4 sm:max-w-screen-lg">
-                <div class="w-1/2 flex flex-row">
-                    <div class="w-3/4 flex flex-col justify-center gap-4">
-                        <div class="mb-12 text-4xl text-left font-medium leading-relaxed">
+            <div class="mx-auto mb-24 min-w-[360px] flex flex-row items-center gap-4 sm:max-w-screen-lg">
+                <div class="w-full flex flex-row">
+                    <div class="w-4/5 flex flex-col justify-center gap-4 p-4">
+                        <div class="mb-12 text-3xl text-left font-medium leading-relaxed">
                             Be Part of the
                             <div class="inline-block whitespace-nowrap bg-brush bg-contain bg-bottom bg-no-repeat">
                                 Future of TON Staking!
@@ -57,34 +57,35 @@
                             </a>
                         </div>
                     </div>
-                    <div class="w-1/4 flex flex-col p-2">
+                    <div class="w-1/5 flex flex-col p-4">
                         <div class="mb-12 justify-start gap-4">
-                            <img src="hpo.svg" class="h-16 w-16 -rotate-30" />
+                            <img src="hpo.svg" class="h-24 w-24 -rotate-30" />
                         </div>
                         <div class="mb-12 flex justify-end gap-4">
-                            <img src="hpo.svg" class="h-16 w-16 rotate-30" />
+                            <img src="hpo.svg" class="h-24 w-24 rotate-30" />
                         </div>
                     </div>
                 </div>
-                <div class="w-1/2 flex flex-col">
-                    <div class="w-full">
-                        <gecko-coin-price-chart-widget locale="en" transparent-background="false" outlined="true"
-                            coin-id="hipo-governance-token" initial-currency="usd">
-                        </gecko-coin-price-chart-widget>
+            </div>
+
+            <div class="mx-auto mb-24 min-w-[360px] flex flex-col items-center gap-4 sm:max-w-screen-lg">
+                <div class="w-full mb-4">
+                    <gecko-coin-price-chart-widget locale="en" transparent-background="false" outlined="true"
+                        coin-id="hipo-governance-token" initial-currency="usd">
+                    </gecko-coin-price-chart-widget>
+                </div>
+                <div class="w-full flex flex-row justify-between">
+                    <div class="flax-auto space-x-1">
+                        <span class="text-lg font-normal">Market Cap.:</span>
+                        <span id="hpoMarketCap" class="text-2xl font-bold">-</span>
                     </div>
-                    <div class="w-full flex flex-row justify-between">
-                        <div class="flax-auto space-x-1">
-                            <span class="text-lg font-normal">Market Cap.:</span>
-                            <span id="hpoMarketCap" class="text-2xl font-bold">-</span>
-                        </div>
-                        <div class="flax-auto space-x-1">
-                            <span class="text-lg font-normal">Volume:</span>
-                            <span id="hpoVolume" class="text-2xl font-bold">-</span>
-                        </div>
-                        <div class="flax-auto space-x-1">
-                            <span class="text-lg font-normal">Holders:</span>
-                            <span id="hpoHolders" class="text-2xl font-bold">-</span>
-                        </div>
+                    <div class="flax-auto space-x-1">
+                        <span class="text-lg font-normal">Volume:</span>
+                        <span id="hpoVolume" class="text-2xl font-bold">-</span>
+                    </div>
+                    <div class="flax-auto space-x-1">
+                        <span class="text-lg font-normal">Holders:</span>
+                        <span id="hpoHolders" class="text-2xl font-bold">-</span>
                     </div>
                 </div>
             </div>
