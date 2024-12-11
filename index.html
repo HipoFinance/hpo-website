@@ -37,60 +37,61 @@
                 </div>
             </div>
 
-            <div class="mx-auto flex flex-col mb-24 md:flex-row md:space-x-4 sm:max-w-screen-lg">
-                <div class="p-4 flex-auto flex flex-row md:w-7/12">
-                    <div class="flex flex-col justify-center gap-4 p-4 md:w-4/7">
-                        <div class="mb-12 text-3xl text-left font-medium leading-relaxed">
-                            Be Part of the
-                            <div class="inline-block whitespace-nowrap bg-brush bg-contain bg-bottom bg-no-repeat">
-                                Future of TON Staking!
-                            </div>
-                        </div>
-
-                        <div class="min-w-[280px] md:px-8">
-                            <a
-                                class="flex w-full flex-row place-content-center items-center gap-4 rounded-2xl bg-gradient-radial from-purple1 to-purple2 px-12 py-4"
-                                href="https://app.ston.fi/swap?chartVisible=false&ft=TON&tt=HPO"
-                                target="_blank" rel="noopener noreferrer"
-                            >
-                                <div class="text-2xl font-bold">Buy HPO</div>
-                            </a>
+            <div class="w-full mx-auto p-8 gap-4 flex flex-col mb-24 md:flex-row items-center justify-between 
+                sm:max-w-screen-lg">
+                <div class="lex flex-col justify-center gap-4 p-4 md:w-4/12">
+                    <div class="mb-12 text-3xl text-left font-medium leading-relaxed">
+                        Be Part of the
+                        <div class="inline-block whitespace-nowrap bg-brush bg-contain bg-bottom bg-no-repeat">
+                            Future of TON Staking!
                         </div>
                     </div>
-                    <div class="flex flex-col p-4 md:w-3/7">
-                        <div class="mb-12 justify-start gap-4">
-                            <img src="hpo.svg" class="h-24 w-24 -rotate-30" />
-                        </div>
-                        <div class="mb-12 flex justify-end gap-4">
-                            <img src="hpo.svg" class="h-24 w-24 rotate-30" />
-                        </div>
+
+                    <div class="min-w-[280px] md:px-8">
+                        <a
+                            class="flex w-full flex-row place-content-center items-center gap-4 rounded-2xl bg-gradient-radial from-purple1 to-purple2 px-12 py-4"
+                            href="https://app.ston.fi/swap?chartVisible=false&ft=TON&tt=HPO"
+                            target="_blank" rel="noopener noreferrer"
+                        >
+                            <div class="text-2xl font-bold">Buy HPO</div>
+                        </a>
+                    </div>
+                </div>
+                <div class="w-3/4 flex flex-row md:flex-col md:w-3/12">
+                    <div class="w-full mb-10 flex flex-row justify-start">
+                        <img src="hpo.svg" class="ml-4 size-20 -rotate-30" />
+                    </div>
+                    <div class="w-full mt-10 flex flex-row justify-end">
+                        <img src="hpo.svg" class="mr-4 size-20 rotate-30" />
                     </div>
                 </div>
 
-                <div class="p-4 flex-auto flex flex-col items-center gap-4 md:w-5/12 sm:max-w-screen-lg">
-                    <div class="w-full mb-4">
-                        <gecko-coin-price-chart-widget locale="en" transparent-background="false" outlined="true"
-                            coin-id="hipo-governance-token" initial-currency="usd">
-                        </gecko-coin-price-chart-widget>
-                    </div>
-                    <div class="w-full flex flex-row justify-between">
-                        <div class="flax-auto space-x-1">
-                            <span class="text-lg font-normal">Market Cap.:</span>
-                            <span id="hpoMarketCap" class="text-2xl font-bold">-</span>
+                <div class="w-full mx-auto md:w-5/12">
+                    <div class="flex-auto flex flex-col items-center">
+                        <div class="w-full mb-4">
+                            <gecko-coin-price-chart-widget locale="en" transparent-background="false" outlined="true"
+                                coin-id="hipo-governance-token" initial-currency="usd">
+                            </gecko-coin-price-chart-widget>
                         </div>
-                        <div class="flax-auto space-x-1">
-                            <span class="text-lg font-normal">Volume:</span>
-                            <span id="hpoVolume" class="text-2xl font-bold">-</span>
-                        </div>
-                        <div class="flax-auto space-x-1">
-                            <span class="text-lg font-normal">Holders:</span>
-                            <span id="hpoHolders" class="text-2xl font-bold">-</span>
+                        <div class="w-full flex flex-row justify-between">
+                            <div class="flax-auto space-x-1">
+                                <span class="text-lg font-normal">Market Cap.:</span>
+                                <span id="hpoMarketCap" class="text-2xl font-bold">-</span>
+                            </div>
+                            <div class="flax-auto space-x-1">
+                                <span class="text-lg font-normal">Volume:</span>
+                                <span id="hpoVolume" class="text-2xl font-bold">-</span>
+                            </div>
+                            <div class="flax-auto space-x-1">
+                                <span class="text-lg font-normal">Holders:</span>
+                                <span id="hpoHolders" class="text-2xl font-bold">-</span>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
 
-            <div class="mx-auto flex flex-col mb-24 items-center md:space-x-4 sm:max-w-screen-lg">
+            <div class="w-full mx-auto p-8 flex flex-col mb-24 items-center md:space-x-4 sm:max-w-screen-lg">
                 <div class="mx-auto flex flex-col mb-12 items-center sm:max-w-screen-lg">
                     <div class="mb-12 text-3xl text-center font-medium px-4 leading-relaxed sm:max-w-screen-lg">
                         Hipo 
@@ -107,7 +108,7 @@
                     </div>
                 </div>
 
-                <div class="w-full mx-auto p-4 flex flex-wrap md:flex-row sm:max-w-screen-lg">
+                <div class="mx-auto w-full flex flex-wrap md:flex-row sm:max-w-screen-lg">
                     <div class="p-2 w-full md:w-1/3 sm:w-1/2 sm:max-w-screen-lg">
                         <div class="flex flex-col items-center text-black bg-slate-300 p-4 gap-1 rounded-lg">
                             <div class="flex flex-row items-center text-xl font-bold p-2 gap-4">
