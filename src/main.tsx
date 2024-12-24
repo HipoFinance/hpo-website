@@ -16,7 +16,6 @@ function updateHpoData() {
     const volumeEl: HTMLElement | null = document.querySelector('#hpoVolume')
     const holdersEl: HTMLElement | null = document.querySelector('#hpoHolders')
     if (marketCapEl == null || volumeEl == null || holdersEl == null) {
-        console.log('=-> html elements not found')
         return
     }
 
