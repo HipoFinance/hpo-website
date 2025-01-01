@@ -23,7 +23,7 @@
         <script type="module" src="/src/calculator.js"></script>
     </head>
     <body class="bg-darkblue2 font-heebo text-gray1">
-        <div id="toast" class="fixed top-4 left-1/2 transform -translate-x-1/2 bg-purple-300 text-black text-sm font-medium py-2 px-4 rounded-lg shadow-md opacity-0 transition-opacity duration-500">
+        <div id="toast" class="z-50 fixed top-4 left-1/2 transform -translate-x-1/2 bg-purple-300 text-black text-sm font-medium py-2 px-4 rounded-lg shadow-md opacity-0 transition-opacity duration-500">
             This is a toast message!
         </div>
     
@@ -351,16 +351,16 @@
                         Reward Calculator
                         <img src="./calculator.webp" class="transform w-4/5 -scale-x-100">
                     </div>
-                    <div class="md:w-2/5 mx-auto my-auto flex flex-col gap-2 items-center sm:max-w-screen-lg">
+                    <div class="md:w-2/5 mx-auto my-auto flex flex-col gap-3 items-center sm:max-w-screen-lg">
                         <div class="w-full h-12 flex flex-row items-center sm:max-w-screen-lg
                             border-2 border-purple1 rounded-xl">
                             <div class="w-1/7 h-full flex flex-col justify-center text-2xl font-bold
                                 rounded-l-md bg-purple1">
                                 <div>$</div>
                             </div>
-                            <div class="w-6/7 h-full flex flex-col">
-                                <input id="invest-value" class="w-full h-full flex px-6 bg-transparent rounded-rmd
-                                    text-2xl"/>
+                            <div class="w-6/7 h-full p-1 flex flex-col">
+                                <input id="invest-value" class="w-full h-full flex px-4 bg-transparent rounded-r-md
+                                    text-2xl focus:outline-1 focus:outline-gray-700 focus:bg-gray-700"/>
                             </div>
                         </div>
 
@@ -383,7 +383,7 @@
                         </div>
 
                         <div class="w-full mx-auto flex flex-col sm:max-w-screen-lg">
-                            <div class="w-full flex flex-row px-4 py-1 justify-between sm:max-w-screen-lg
+                            <div class="w-full flex flex-row px-4 py-2 justify-between sm:max-w-screen-lg
                                 border-2 border-purple1 rounded-t-xl">
                                 <div class="md:w-2/5 text-start font-bold my-auto align-middle">Earnings</div>
                                 <div class="md:w-3/5 relative inline-block text-left">
@@ -432,27 +432,27 @@
                             </div>
                             <div class="w-full flex flex-col sm:max-w-screen-lg
                                 border-l-2 border-r-2 border-b-2 border-purple1 rounded-b-xl">
-                                <div class="w-full px-8 py-2 flex flex-row text-left">
+                                <div class="w-full px-8 py-3 flex flex-row text-left">
                                     <div class="w-1/2">1 Day</div>
                                     <div class="w-1/2 font-bold"><p id="daily-reward-1">$2.5</p></div>
                                 </div>
-                                <div class="w-full px-8 py-2 flex flex-row text-left">
+                                <div class="w-full px-8 py-3 flex flex-row text-left">
                                     <div class="w-1/2">7 Days</div>
                                     <div class="w-1/2 font-bold"><p id="daily-reward-7">$17.5</p></div>
                                 </div>
-                                <div class="w-full px-8 py-2 flex flex-row text-left">
+                                <div class="w-full px-8 py-3 flex flex-row text-left">
                                     <div class="w-1/2">30 Days</div>
                                     <div class="w-1/2 font-bold"><p id="daily-reward-30">$75</p></div>
                                 </div>
-                                <div class="hidden w-full px-8 py-2 flex-row text-left">
+                                <div class="hidden w-full px-8 py-3 flex-row text-left">
                                     <div class="w-1/2">365 Days</div>
                                     <div class="w-1/2 font-bold"><p id="daily-reward-365">$912.5</p></div>
                                 </div>
-                                <div class="px-8 py-2 mx-4 my-2 text-center bg-purple1 rounded-md">
+                                <div class="px-8 py-3 mx-4 my-3 text-center bg-purple1 rounded-md">
                                     <a id="pool-link" href="" target="_blank">Provide Liquidity &amp; Earn</a>
                                 </div>
                             </div>
-                            <div class="w-full px-4 py-2 text-left text-sm sm:max-w-screen-lg">
+                            <div class="w-full px-4 py-3 text-left text-sm sm:max-w-screen-lg">
                                 Disclaimer: Earnings are estimates; risks include volatility and impermanent loss.
                             </div>
                         </div>
