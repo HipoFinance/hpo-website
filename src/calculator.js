@@ -13,6 +13,7 @@ const dailyReward_30 = document.getElementById('daily-reward-30')
 const dailyReward_365 = document.getElementById('daily-reward-365')
 
 const investInput = document.getElementById('invest-value')
+const poolLink = document.getElementById('pool-link')
 
 let rewardMap = new Map()
 
@@ -46,6 +47,7 @@ dexTonco.addEventListener('click', () => {
 function selectDex(dex) {
     selectedDex = dex
     updateRewards();
+    updatePoolLink();
 
     dexSton.classList.add('bg-transparent')
     dexDedust.classList.add('bg-transparent')
@@ -65,6 +67,7 @@ function selectDex(dex) {
 
 function selectPool(pool) {
     selectedPool = pool
+    updatePoolLink();
 }
 
 function setInvestAmount(value) {
@@ -134,6 +137,30 @@ function updateRewards() {
     dailyReward_30.innerText = '$' + calculatedReward(investAmount, 30).toLocaleString()
     dailyReward_365.innerText = '$' + calculatedReward(investAmount, 365).toLocaleString()
 };
+
+function updatePoolLink() {
+    let link = ''
+    switch (selectedDex) {
+        case 'ston':
+            switch (selectedPool) {
+                case 'hton-hpo':
+                    link = 'https://app.ston.fi/pools/EQAqzDWPpbZbu2Prs3UCG9QFqOAOwuOf0JwweZ--owY4BEmz';
+                    break;
+                case 'hton-ton':
+                    link = 'https://app.ston.fi/pools/EQDyLt2WbcdR92oSapDwwmF86Jr6I67m3Kl7KoE9zW_eJ8h0';
+                    break;
+                case 'hpo-ton':
+                    link = 'https://app.ston.fi/pools/EQD7KoLuaFFhdMEkmgUedb1k0hQDUSP-QjOXFwssjXfgbTX5';
+                    break;
+            }
+            break;
+        case 'dedust':
+            break;
+        case 'tonco':
+            break;
+    }
+    poolLink.setAttribute("href", link);
+}
 
 function calculatedReward(invest, days) {
     let reward = 0
