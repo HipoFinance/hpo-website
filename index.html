@@ -22,28 +22,33 @@
         <script src="https://widgets.coingecko.com/gecko-coin-price-chart-widget.js"></script>
     </head>
     <body class="bg-darkblue2 font-heebo text-gray1">
-        <div id="toast" class="z-50 fixed top-4 left-1/2 transform -translate-x-1/2 bg-purple-300 text-black text-sm font-medium py-2 px-4 rounded-lg shadow-md opacity-0 transition-opacity duration-500">
+        <div
+            id="toast"
+            class="fixed left-1/2 top-4 z-50 -translate-x-1/2 transform rounded-lg bg-purple-300 px-4 py-2 text-sm font-medium text-black opacity-0 shadow-md transition-opacity duration-500"
+        >
             This is a toast message!
         </div>
-    
+
         <div class="min-w-[360px] bg-gradient-radial from-darkblue1 to-darkblue2 bg-fixed text-center">
-            <div class="mx-auto min-w-[360px] flex flex-row items-center sm:max-w-screen-lg">
+            <div class="mx-auto flex min-w-[360px] flex-row items-center sm:max-w-screen-lg">
                 <div class="mb-4 flex w-full flex-row items-center gap-4 p-8">
                     <a href="https://hipo.finance/"><img src="hipo.svg" class="h-16 w-16" /></a>
                     <a href="https://hipo.finance/"><div class="font-eczar text-2xl text-white">Hipo</div></a>
                 </div>
             </div>
 
-            <div class="mx-auto min-w-[360px] flex flex-row items-center text-center sm:max-w-screen-lg">
-                <div class="w-full mb-16 px-4 text-4xl font-bold sm:text-5xl">
-                    <span class="bg-gradient-to-r from-purple1 to-pink1 bg-clip-text text-transparent">$HPO</span>, the Governance & Profit-Sharing Token of Hipo
+            <div class="mx-auto flex min-w-[360px] flex-row items-center text-center sm:max-w-screen-lg">
+                <div class="mb-16 w-full px-4 text-4xl font-bold sm:text-5xl">
+                    <span class="bg-gradient-to-r from-purple1 to-pink1 bg-clip-text text-transparent">$HPO</span>, the
+                    Governance & Profit-Sharing Token of Hipo
                 </div>
             </div>
 
-            <div class="w-full mx-auto px-4 gap-4 flex flex-col mb-24 md:flex-row items-center justify-between 
-                sm:max-w-screen-lg">
+            <div
+                class="mx-auto mb-24 flex w-full flex-col items-center justify-between gap-4 px-4 sm:max-w-screen-lg md:flex-row"
+            >
                 <div class="lex flex-col justify-center gap-4 p-4 md:w-4/12">
-                    <div class="mb-12 text-3xl text-left font-medium leading-relaxed">
+                    <div class="mb-12 text-left text-3xl font-medium leading-relaxed">
                         Be Part of the
                         <div class="inline-block whitespace-nowrap bg-brush bg-contain bg-bottom bg-no-repeat">
                             Future of TON Staking!
@@ -54,29 +59,35 @@
                         <a
                             class="flex w-full flex-row place-content-center items-center gap-4 rounded-2xl bg-gradient-radial from-purple1 to-purple2 px-12 py-4"
                             href="https://app.ston.fi/swap?chartVisible=false&ft=TON&tt=HPO"
-                            target="_blank" rel="noopener noreferrer"
+                            target="_blank"
+                            rel="noopener noreferrer"
                         >
                             <div class="text-2xl font-bold">Buy HPO</div>
                         </a>
                     </div>
                 </div>
-                <div class="w-3/4 flex flex-row md:flex-col md:w-3/12">
-                    <div class="w-full mb-10 flex flex-row justify-start">
+                <div class="flex w-3/4 flex-row md:w-3/12 md:flex-col">
+                    <div class="mb-10 flex w-full flex-row justify-start">
                         <img src="hpo.svg" class="ml-4 size-20 -rotate-30" />
                     </div>
-                    <div class="w-full mt-10 flex flex-row justify-end">
+                    <div class="mt-10 flex w-full flex-row justify-end">
                         <img src="hpo.svg" class="mr-4 size-20 rotate-30" />
                     </div>
                 </div>
 
-                <div class="w-full mx-auto md:w-5/12">
-                    <div class="flex-auto flex flex-col items-center">
-                        <div class="w-full mb-4">
-                            <gecko-coin-price-chart-widget locale="en" transparent-background="false" outlined="true"
-                                coin-id="hipo-governance-token" initial-currency="usd">
+                <div class="mx-auto w-full md:w-5/12">
+                    <div class="flex flex-auto flex-col items-center">
+                        <div class="mb-4 w-full">
+                            <gecko-coin-price-chart-widget
+                                locale="en"
+                                transparent-background="false"
+                                outlined="true"
+                                coin-id="hipo-governance-token"
+                                initial-currency="usd"
+                            >
                             </gecko-coin-price-chart-widget>
                         </div>
-                        <div class="w-full flex flex-row justify-between">
+                        <div class="flex w-full flex-row justify-between">
                             <div class="flax-auto space-x-1">
                                 <span class="text-lg font-normal">Market Cap.:</span>
                                 <span id="hpoMarketCap" class="text-2xl font-bold">-</span>
@@ -94,15 +105,16 @@
                 </div>
             </div>
 
-            <div class="mx-auto flex min-w-[360px] flex-col items-center sm:max-w-screen-lg">    
-                <div class="mb-12 p-5 w-full flex flex-col items-center">
-                    <iframe 
-                        class="w-full h-full aspect-video rounded-md" 
-                        src="https://www.youtube.com/embed/QYU-TWJK1yg" 
-                        title="YouTube video player" 
-                        frameborder="0" 
-                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-                        allowfullscreen>
+            <div class="mx-auto flex min-w-[360px] flex-col items-center sm:max-w-screen-lg">
+                <div class="mb-12 flex w-full flex-col items-center p-5">
+                    <iframe
+                        class="aspect-video h-full w-full rounded-md"
+                        src="https://www.youtube.com/embed/QYU-TWJK1yg"
+                        title="YouTube video player"
+                        frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen
+                    >
                     </iframe>
                 </div>
 
@@ -160,14 +172,15 @@
                         </div>
                     </div>
 
-                    <div class="mb-12 w-full flex flex-col items-center">
-                        <iframe 
-                            class="w-full h-full aspect-video rounded-md" 
-                            src="https://youtube.com/embed/ZHAlS4wystU?feature=share" 
-                            title="YouTube video player" 
-                            frameborder="0" 
-                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-                            allowfullscreen>
+                    <div class="mb-12 flex w-full flex-col items-center">
+                        <iframe
+                            class="aspect-video h-full w-full rounded-md"
+                            src="https://youtube.com/embed/ZHAlS4wystU?feature=share"
+                            title="YouTube video player"
+                            frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                            allowfullscreen
+                        >
                         </iframe>
                     </div>
                 </div>
@@ -700,7 +713,9 @@
                     <div class="mx-auto my-8 max-w-2xl">
                         <div class="text-xl font-bold">5. What is the price of $HPO?</div>
                         <div class="my-4 text-purple3">
-                            The initial price of $HPO on the DEX was $0.02. After listing, the price is determined by market demand and supply. Our goal is to list at a modest price, allowing early supporters to benefit from Hipo’s long-term growth potential.
+                            The initial price of $HPO on the DEX was $0.02. After listing, the price is determined by
+                            market demand and supply. Our goal is to list at a modest price, allowing early supporters
+                            to benefit from Hipo’s long-term growth potential.
                         </div>
                     </div>
                     <div class="h-px w-full border-t border-purple3 border-opacity-50"></div>
@@ -773,9 +788,7 @@
                         <div class="my-4 flex flex-col gap-4 text-purple3">
                             <p>There are two main ways to become a $HPO holder:</p>
                             <ol class="flex list-inside list-[lower-alpha] flex-col gap-4">
-                                <li>
-                                    <b class="font-bold">Buy $HPO</b>: You can purchase $HPO from listed markets.
-                                </li>
+                                <li><b class="font-bold">Buy $HPO</b>: You can purchase $HPO from listed markets.</li>
                                 <li>
                                     <b class="font-bold">Airdrops</b>: Become eligible for $HPO airdrops by
                                     participating in our ecosystem.
@@ -806,7 +819,7 @@
                     <div class="h-px w-full border-t border-purple3 border-opacity-50"></div>
 
                     <div class="mx-auto my-8 max-w-2xl">
-                        <div class="text-xl font-bold">11. How to Buy $HPO in the TGE?</div>
+                        <div class="text-xl font-bold">11. How to Buy $HPO?</div>
                         <div class="my-4 text-purple3">
                             <ol class="flex list-inside list-[lower-alpha] flex-col gap-4">
                                 <li>Get a TON-supported Wallet.</li>
@@ -819,15 +832,21 @@
                     <div class="h-px w-full border-t border-purple3 border-opacity-50"></div>
 
                     <div class="mx-auto my-8 max-w-2xl">
-                        <div class="text-xl font-bold">12. How do you manage sell pressure after airdrops?
-                        </div>
+                        <div class="text-xl font-bold">12. How do you manage sell pressure after airdrops?</div>
                         <div class="my-4 text-purple3">
                             <p>
-                                While the market determines whether holders sell or keep HPO, our approach focuses on: 
+                                While the market determines whether holders sell or keep HPO, our approach focuses on:
                             </p>
                             <ol class="flex list-inside list-[lower-alpha] flex-col gap-4">
-                                <li>Airdropping tokens to those who bring real value to the Hipo ecosystem, attracting long-term believers.</li>
-                                <li>Developing Hipo’s products and market, creating long-term growth opportunities for HPO holders, and ensuring that any sell pressure becomes an opportunity for committed supporters to accumulate more HPO.</li>
+                                <li>
+                                    Airdropping tokens to those who bring real value to the Hipo ecosystem, attracting
+                                    long-term believers.
+                                </li>
+                                <li>
+                                    Developing Hipo’s products and market, creating long-term growth opportunities for
+                                    HPO holders, and ensuring that any sell pressure becomes an opportunity for
+                                    committed supporters to accumulate more HPO.
+                                </li>
                             </ol>
                         </div>
                     </div>
