@@ -16,6 +16,12 @@ export default {
                 purple2: '#461472',
                 purple3: '#dfbcfe',
                 purple4: '#d8d8f6',
+                purple5: '#4411d8',
+                purple6: '#7e22ce',
+                purple7: '#471fb7',
+                purple8: '#8753ff',
+                purple9: '#cc60fe',
+
                 pink1: '#e622c2',
                 darkblue1: '#170c55',
                 darkblue2: '#03010d',
