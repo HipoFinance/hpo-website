@@ -5,7 +5,7 @@ interface Props {
     model: Model
 }
 
-const Footer = observer(({ model }: Props) => {
+const Footer = observer(({}: Props) => {
     return (
         // <!-- Footer -->
         <div className='mx-auto min-w-[360px] bg-gradient-radial from-darkblue1 to-darkblue2 bg-fixed py-4 text-center md:py-8 lg:py-16'>
