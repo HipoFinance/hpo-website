@@ -83,7 +83,7 @@ export class Model {
         this.holdersCount = val
     }
 
-    updateHpoData = () => {
+    updateHpoData() {
         let timer = setTimeout(this.updateHpoData, 300_000)
 
         fetch('https://gauge.hipo.finance/data')
