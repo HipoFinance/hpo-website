@@ -122,19 +122,15 @@ export class Model {
 }
 
 function setCookie(name: string, value: string, hours: number) {
-    console.log('=->set', name, value)
     const d = new Date()
     d.setTime(d.getTime() + hours * 60 * 60 * 1000)
     document.cookie = `${name}=${value};expires=${d.toUTCString()}; path=/; SameSite=Lax; Secure`
 }
 
 function getCookie(name: string): string | null {
-    console.log('=->getCookie is called.')
     const cookie = document.cookie.toString()
     const regexp = new RegExp('(^| )' + name + '=([^;]+)')
     const match = regexp.exec(cookie)
-
-    console.log('=->get', cookie, match)
 
     return match ? match[2] : null
 }
