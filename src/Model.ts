@@ -125,7 +125,7 @@ function setCookie(name: string, value: string, hours: number) {
     console.log('=->set', name, value)
     const d = new Date()
     d.setTime(d.getTime() + hours * 60 * 60 * 1000)
-    document.cookie = `${name}=${value};expires=${d.toUTCString()};path=/`
+    document.cookie = `${name}=${value};expires=${d.toUTCString()}; path=/; SameSite=Lax; Secure`
 }
 
 function getCookie(name: string): string | null {
