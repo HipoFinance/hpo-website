@@ -128,7 +128,7 @@ function setCookie(name: string, value: string, hours: number) {
 }
 
 function getCookie(name: string): string | null {
-    const cookie = document.cookie
+    const cookie = document.cookie.toString()
     const regexp = new RegExp('(^| )' + name + '=([^;]+)')
     const match = regexp.exec(cookie)
 
