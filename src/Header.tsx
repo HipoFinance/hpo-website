@@ -11,28 +11,28 @@ const Header = observer(({ model }: Props) => {
             <div className='font-body text-brown dark:text-dark-50 mx-auto w-full'>
                 {!model.isBannerClosed && (
                     <div className='fixed left-0 right-0 top-0 z-50 mx-auto max-w-screen-lg'>
-                        <div className='w-fiull border-1 border-c6 bg-c4 relative mx-4 my-4 flex flex-col-reverse items-start justify-items-end gap-0 rounded-2xl px-4 py-2 md:flex-row md:items-center md:justify-between md:gap-4'>
+                        <div className='w-fiull border-1 relative mx-4 my-4 flex flex-col-reverse items-start justify-items-end gap-0 rounded-2xl border-c6 bg-c4 px-4 py-2 md:flex-row md:items-center md:justify-between md:gap-4'>
                             <div className='flex w-full flex-col items-center justify-between gap-2 md:flex-row'>
                                 <div className='text-c7'>
                                     <div className='flex flex-col items-center gap-1 md:hidden'>
                                         <div>
-                                            💰 <b>Airdrop! 6.2% APY</b>
+                                            💰 <b>Airdrop! 43.7% APY</b>
                                         </div>
                                         <div>Earn TON + HPO by Staking in Hipo.</div>
                                     </div>
                                     <div className='max-md:hidden'>
-                                        💰 <b>Airdrop! 6.2% APY</b> — Earn TON + HPO by Staking in Hipo.
+                                        💰 <b>Airdrop! 43.7% APY</b> — Earn TON + HPO by Staking in Hipo.
                                     </div>
                                 </div>
                                 <div>
                                     <a href='http://t.me/HipoFinanceBot/join' target='_blank' rel='noopener noreferrer'>
-                                        <button className='bg-c6 rounded-xl px-8 py-2 text-white'>Earn Now</button>
+                                        <button className='rounded-xl bg-c6 px-8 py-2 text-white'>Earn Now</button>
                                     </a>
                                 </div>
                             </div>
                             <div className='absolute right-0 top-0 flex w-full flex-row justify-end md:static md:w-fit'>
                                 <button
-                                    className='text-c6 p-3 text-xs font-bold md:py-2'
+                                    className='p-3 text-xs font-bold text-c6 md:py-2'
                                     onClick={() => {
                                         model.closeBanner()
                                     }}
