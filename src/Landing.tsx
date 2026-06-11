@@ -415,7 +415,7 @@ const Landing = observer(({ model }: Props) => {
                     <div className='my-4 text-4xl font-bold'>Partners</div>
                     <div className='mx-auto mb-8 w-2/3 text-xl leading-relaxed'>
                         Get a 5% bonus airdrop by holding
-                        <div className='inline-block whitespace-nowrap bg-brush bg-contain bg-bottom bg-no-repeat font-bold'>
+                        <div className='mx-4 inline-block whitespace-nowrap bg-brush bg-contain bg-bottom bg-no-repeat font-bold'>
                             $100 worth of $HPO
                         </div>
                         and any partner token or NFT at the snapshot!
