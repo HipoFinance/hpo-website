@@ -20,7 +20,7 @@ const Landing = observer(({ model }: Props) => {
                     <div className='mb-12 text-left text-3xl font-medium leading-relaxed'>
                         Be Part of the
                         <div className='inline-block whitespace-nowrap bg-brush bg-contain bg-bottom bg-no-repeat'>
-                            Future of TON Staking!
+                            Future of GRAM Staking!
                         </div>
                     </div>
 
@@ -97,7 +97,7 @@ const Landing = observer(({ model }: Props) => {
                         We see <span className='font-bold text-pink1'>incredible growth potential</span> and are excited
                         to capture that value alongside all Hipo community.
                     </div>
-                    <div className='mx-auto my-8 text-purple3'>Shape TON`&apos;`s future with $HPO!</div>
+                    <div className='mx-auto my-8 text-purple3'>Shape GRAM&apos;s future with $HPO!</div>
                     <img
                         src='rocket.webp'
                         className='mx-auto h-80 object-cover mix-blend-screen'
@@ -124,7 +124,7 @@ const Landing = observer(({ model }: Props) => {
                             <div className='flex h-14 w-14 place-content-center items-center rounded-2xl bg-gradient-radial from-purple1 to-purple2 text-3xl'>
                                 02
                             </div>
-                            <div className=''>Ensure you have enough TON for your desired $HPO purchase.</div>
+                            <div className=''>Ensure you have enough GRAM for your desired $HPO purchase.</div>
                         </div>
 
                         <div className='flex flex-1 flex-col gap-4'>
@@ -138,7 +138,7 @@ const Landing = observer(({ model }: Props) => {
                             <div className='flex h-14 w-14 place-content-center items-center rounded-2xl bg-gradient-radial from-purple1 to-purple2 text-3xl'>
                                 04
                             </div>
-                            <div className=''>Swap your TON for $HPO, and receive $HPO in your wallet instantly.</div>
+                            <div className=''>Swap your GRAM for $HPO, and receive $HPO in your wallet instantly.</div>
                         </div>
                     </div>
 
@@ -159,7 +159,7 @@ const Landing = observer(({ model }: Props) => {
                 </div>
 
                 <div className='mb-32 px-8 text-2xl sm:mx-24'>
-                    Each category in $HPO tokenomics is strategically designed to fuel Hipo`&apos;`s growth.
+                    Each category in $HPO tokenomics is strategically designed to fuel Hipo&apos;s growth.
                     <a
                         href='https://docs.hipo.finance/hipo-tokens/hipo-governance-token-hpo'
                         className='text-purple3'
@@ -200,7 +200,7 @@ const Landing = observer(({ model }: Props) => {
                         <div className='mx-auto text-left text-lg md:mx-0'>
                             <ul className='list-inside list-disc text-purple3'>
                                 <li className='py-4'>
-                                    <span className='text-white'>1.54M TON ($8.5M) TVL</span>
+                                    <span className='text-white'>1.54M GRAM ($8.5M) TVL</span>
                                 </li>
                                 <li className='border-t border-purple3 border-opacity-25 py-4'>
                                     <div className='inline-block align-top'>
@@ -292,7 +292,7 @@ const Landing = observer(({ model }: Props) => {
                             <ul className='list-inside list-disc text-purple3'>
                                 <li className='py-4'>
                                     <span className='text-white'>
-                                        Only 12% of 500M stakable TON is in liquid staking—massive room for growth.
+                                        Only 12% of 500M stakable GRAM is in liquid staking—massive room for growth.
                                     </span>
                                 </li>
                             </ul>
@@ -565,7 +565,7 @@ const Landing = observer(({ model }: Props) => {
                             </div>
                             <div className='flex-1 text-left'>
                                 Provide <b className='font-bold'>$100</b> liquidity to
-                                <b className='font-bold'>TON/USDT</b> pool on TONCO.
+                                <b className='font-bold'>GRAM/USDT</b> pool on TONCO.
                             </div>
                         </div>
 
@@ -597,7 +597,7 @@ const Landing = observer(({ model }: Props) => {
                         <div className='border-b border-b-purple3 border-opacity-20 p-4'>
                             Early Stakers
                             <br />
-                            (500K & 1M TON TVL)
+                            (500K & 1M GRAM TVL)
                         </div>
                         <div className='flex border-b border-b-purple3 border-opacity-20 p-4'>
                             2 weeks after TGE, 9 Dec 2024
@@ -718,11 +718,11 @@ const Landing = observer(({ model }: Props) => {
                         <div className='my-4 text-purple3'>
                             <ol className='flex list-inside list-[lower-alpha] flex-col gap-4'>
                                 <li>
-                                    Market Opportunity: Only 12% of 500M stakable TON is in liquid staking, leaving vast
-                                    room for growth.
+                                    Market Opportunity: Only 12% of 500M stakable GRAM is in liquid staking, leaving
+                                    vast room for growth.
                                 </li>
                                 <li>
-                                    Highest APY: Hipo has delivered top returns, and with TON`&apos;`s decentralization,
+                                    Highest APY: Hipo has delivered top returns, and with TON&apos;s decentralization,
                                     it is positioned to capture a larger market share.
                                 </li>
                                 <li>
@@ -768,7 +768,7 @@ const Landing = observer(({ model }: Props) => {
                             </p>
                             <ol className='flex list-inside list-[lower-alpha] flex-col gap-4'>
                                 <li>
-                                    <b className='font-bold'>Stake Your TON</b>: Stake your TON with Hipo to become
+                                    <b className='font-bold'>Stake Your GRAM</b>: Stake your GRAM with Hipo to become
                                     eligible.
                                 </li>
                                 <li>
@@ -785,9 +785,9 @@ const Landing = observer(({ model }: Props) => {
                         <div className='my-4 text-purple3'>
                             <ol className='flex list-inside list-[lower-alpha] flex-col gap-4'>
                                 <li>Get a TON-supported Wallet.</li>
-                                <li>Ensure You Have TON for your desired $HPO purchase.</li>
+                                <li>Ensure You Have GRAM for your desired $HPO purchase.</li>
                                 <li>Head to the listed DEXs and connect your TON wallet.</li>
-                                <li>Swap TON for $HPO, and receive $HPO instantly in your wallet!</li>
+                                <li>Swap GRAM for $HPO, and receive $HPO instantly in your wallet!</li>
                             </ol>
                         </div>
                     </div>

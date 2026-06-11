@@ -3,9 +3,9 @@ const dexDedust = document.getElementById('dedust')
 const dexSton = document.getElementById('ston')
 const dexTonco = document.getElementById('tonco')
 
-const dropdownButton = document.getElementById('dropdownButton');
-const dropdownMenu = document.getElementById('dropdownMenu');
-const dropdownItems = document.querySelectorAll('.dropdown-item');
+const dropdownButton = document.getElementById('dropdownButton')
+const dropdownMenu = document.getElementById('dropdownMenu')
+const dropdownItems = document.querySelectorAll('.dropdown-item')
 
 const dailyReward_1 = document.getElementById('daily-reward-1')
 const dailyReward_7 = document.getElementById('daily-reward-7')
@@ -25,29 +25,29 @@ selectDex(selectedDex)
 selectPool(selectedPool)
 setInvestAmount(investAmount)
 
-readAndUpdateRewardInfo();
+readAndUpdateRewardInfo()
 
 dexDedust.addEventListener('click', () => {
     showToast('Comming soon.')
     // selectDex('dedust')
     // updateRewards();
-});
+})
 
 dexSton.addEventListener('click', () => {
     selectDex('ston')
-    updateRewards();
-});
+    updateRewards()
+})
 
 dexTonco.addEventListener('click', () => {
     showToast('Comming soon.')
     // selectDex('tonco')
     // updateRewards();
-});
+})
 
 function selectDex(dex) {
     selectedDex = dex
-    updateRewards();
-    updatePoolLink();
+    updateRewards()
+    updatePoolLink()
 
     dexSton.classList.add('bg-transparent')
     dexDedust.classList.add('bg-transparent')
@@ -55,19 +55,19 @@ function selectDex(dex) {
     switch (dex) {
         case 'ston':
             dexSton.classList.replace('bg-transparent', 'bg-purple1')
-            break;
+            break
         case 'dedust':
             dexDedust.classList.replace('bg-transparent', 'bg-purple1')
-            break;
+            break
         case 'tonco':
             dexTonco.classList.replace('bg-transparent', 'bg-purple1')
-            break;
+            break
     }
 }
 
 function selectPool(pool) {
     selectedPool = pool
-    updatePoolLink();
+    updatePoolLink()
 }
 
 function setInvestAmount(value) {
@@ -77,66 +77,66 @@ function setInvestAmount(value) {
 
 // Toggle Dropdown
 dropdownButton.addEventListener('click', () => {
-  dropdownMenu.classList.toggle('hidden');
-});
+    dropdownMenu.classList.toggle('hidden')
+})
 
 // Select Option and Close Dropdown
-dropdownItems.forEach(item => {
-  item.addEventListener('click', (e) => {
-    const pool = item.getAttribute('pool-name');
-    selectPool(pool)
+dropdownItems.forEach((item) => {
+    item.addEventListener('click', (e) => {
+        const pool = item.getAttribute('pool-name')
+        selectPool(pool)
 
-    updateRewards();
+        updateRewards()
 
-    const poolHtml = item.innerHTML;
-    // Update Button Text
-    dropdownButton.innerHTML = `
+        const poolHtml = item.innerHTML
+        // Update Button Text
+        dropdownButton.innerHTML = `
       ${poolHtml}
       <img src="down.svg" class="size-6"/>
-    `;
+    `
 
-    // Close Dropdown
-    dropdownMenu.classList.add('hidden');
-  });
-});
+        // Close Dropdown
+        dropdownMenu.classList.add('hidden')
+    })
+})
 
 // Close Dropdown on Outside Click
 document.addEventListener('click', (e) => {
-  if (!dropdownButton.contains(e.target) && !dropdownMenu.contains(e.target)) {
-    dropdownMenu.classList.add('hidden');
-  }
-});
+    if (!dropdownButton.contains(e.target) && !dropdownMenu.contains(e.target)) {
+        dropdownMenu.classList.add('hidden')
+    }
+})
 
 document.getElementById('invest-value').addEventListener('input', function (e) {
-    let input = e.target.value;
-  
+    let input = e.target.value
+
     // Remove all non-digit characters
-    input = input.replace(/[^\d.]/g, '');
- 
+    input = input.replace(/[^\d.]/g, '')
+
     // Update invest value
     investAmount = Number(input)
 
     // Ensure only one dot for decimals
-    const parts = input.split('.');
+    const parts = input.split('.')
 
     // Add commas to the integer part
-    parts[0] = parts[0].replace(/\B(?=(\d{3})+(?!\d))/g, ',');
+    parts[0] = parts[0].replace(/\B(?=(\d{3})+(?!\d))/g, ',')
 
     // Rejoin the integer and fractional parts
-    const formatted = parts.join('.');
-      
-    // Set the formatted value back to the input
-    e.target.value = formatted;
+    const formatted = parts.join('.')
 
-    updateRewards();
-});
+    // Set the formatted value back to the input
+    e.target.value = formatted
+
+    updateRewards()
+})
 
 function updateRewards() {
     dailyReward_1.innerText = '$' + calculatedReward(investAmount, 1).toLocaleString()
     dailyReward_7.innerText = '$' + calculatedReward(investAmount, 7).toLocaleString()
     dailyReward_30.innerText = '$' + calculatedReward(investAmount, 30).toLocaleString()
     dailyReward_365.innerText = '$' + calculatedReward(investAmount, 365).toLocaleString()
-};
+}
 
 function updatePoolLink() {
     let link = ''
@@ -144,22 +144,22 @@ function updatePoolLink() {
         case 'ston':
             switch (selectedPool) {
                 case 'hton-hpo':
-                    link = 'https://app.ston.fi/pools/EQAqzDWPpbZbu2Prs3UCG9QFqOAOwuOf0JwweZ--owY4BEmz';
-                    break;
+                    link = 'https://app.ston.fi/pools/EQAqzDWPpbZbu2Prs3UCG9QFqOAOwuOf0JwweZ--owY4BEmz'
+                    break
                 case 'hton-ton':
-                    link = 'https://app.ston.fi/pools/EQDyLt2WbcdR92oSapDwwmF86Jr6I67m3Kl7KoE9zW_eJ8h0';
-                    break;
+                    link = 'https://app.ston.fi/pools/EQDyLt2WbcdR92oSapDwwmF86Jr6I67m3Kl7KoE9zW_eJ8h0'
+                    break
                 case 'hpo-ton':
-                    link = 'https://app.ston.fi/pools/EQD7KoLuaFFhdMEkmgUedb1k0hQDUSP-QjOXFwssjXfgbTX5';
-                    break;
+                    link = 'https://app.ston.fi/pools/EQD7KoLuaFFhdMEkmgUedb1k0hQDUSP-QjOXFwssjXfgbTX5'
+                    break
             }
-            break;
+            break
         case 'dedust':
-            break;
+            break
         case 'tonco':
-            break;
+            break
     }
-    poolLink.setAttribute("href", link);
+    poolLink.setAttribute('href', link)
 }
 
 function calculatedReward(invest, days) {
@@ -172,16 +172,16 @@ function calculatedReward(invest, days) {
             if (data != null) {
                 apy = data.apy
             }
-            let unitReward = apy * days / 365
+            let unitReward = (apy * days) / 365
 
             reward = invest * unitReward
-            break;
+            break
 
         case 'dedust':
-            break;
+            break
 
         case 'tonco':
-            break;
+            break
     }
 
     return reward
@@ -201,21 +201,21 @@ async function readAndUpdateRewardInfo() {
         // hTON/HPO pool
         farmApy = data.dex.ston.farm_hton_hpo.status === 'operational' ? data.dex.ston.farm_hton_hpo.apy : 0
         poolApy = data.dex.ston.pool_hton_hpo.apy_7d
-        rewardMap.set('ston-hton-hpo', {apy: farmApy + poolApy})
+        rewardMap.set('ston-hton-hpo', { apy: farmApy + poolApy })
 
-        // hTON/TON pool
+        // hTON/GRAM pool
         farmApy = data.dex.ston.farm_hton_ton.status === 'operational' ? data.dex.ston.farm_hton_ton.apy : 0
         poolApy = data.dex.ston.pool_hton_ton.apy_7d
-        rewardMap.set('ston-hton-ton', {apy: farmApy + poolApy})
+        rewardMap.set('ston-hton-ton', { apy: farmApy + poolApy })
 
-        // HPO/TON pool
+        // HPO/GRAM pool
         farmApy = data.dex.ston.farm_hpo_ton.status === 'operational' ? data.dex.ston.farm_hpo_ton.apy : 0
         poolApy = data.dex.ston.pool_hpo_ton.apy_7d
-        rewardMap.set('ston-hpo-ton', {apy: farmApy + poolApy})
+        rewardMap.set('ston-hpo-ton', { apy: farmApy + poolApy })
 
         //-------------------------------------------
         // DeDust pools
-        
+
         // To be done.
 
         //-------------------------------------------
@@ -227,40 +227,40 @@ async function readAndUpdateRewardInfo() {
     updateRewards()
 
     // Schedule the next call for 5 minutes later
-    setTimeout(readAndUpdateRewardInfo, 5 * 60 * 1000);
+    setTimeout(readAndUpdateRewardInfo, 5 * 60 * 1000)
 }
 
 async function readGauge() {
     try {
         // Replace with your web service URL
-        const url = 'https://gauge.hipo.finance/data';
+        const url = 'https://gauge.hipo.finance/data'
 
         // Make the HTTP request
-        const response = await fetch(url);
+        const response = await fetch(url)
 
         // Check if the response is OK.
         if (!response.ok) {
-            throw new Error(`HTTP error! Status: ${response.status}`);
+            throw new Error(`HTTP error! Status: ${response.status}`)
         }
 
         // Parse JSON and return data
-        const data = await response.json();
+        const data = await response.json()
         return data
     } catch (error) {
         // Handle errors
-        console.error('Error fetching farm data:', error);
+        console.error('Error fetching farm data:', error)
         return null
-    }   
+    }
 }
 
 function showToast(message, duration = 3000) {
-    const toast = document.getElementById('toast');
-    toast.innerText = message;
+    const toast = document.getElementById('toast')
+    toast.innerText = message
 
-    toast.classList.remove('opacity-0');
-    
+    toast.classList.remove('opacity-0')
+
     setTimeout(() => {
         // Fade out the toast
-        toast.classList.add('opacity-0');
-    }, duration);
+        toast.classList.add('opacity-0')
+    }, duration)
 }
