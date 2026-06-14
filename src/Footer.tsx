@@ -51,6 +51,14 @@ const Footer = observer(({ model }: Props) => {
                                 {' '}
                                 Hipo Hub{' '}
                             </a>
+                            <a
+                                className='my-4 block text-sm'
+                                href='https://ton.vote/EQBjc5x7yY4XaB4br1n2fOfw3XwrNN5IckvkQHb4vTH8YgTv'
+                                target='dao_votes'
+                            >
+                                {' '}
+                                DAO Votes{' '}
+                            </a>
                         </div>
 
                         <div className='mx-8 my-4'>
